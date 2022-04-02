@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".SendPoints">
+    <TextView
+        android:id="@+id/pointsName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Name, Name" />
+
+    <ImageView
+        android:id="@+id/pointsPicture"
+        android:layout_width="131dp"
+        android:layout_height="225dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pointsName"
+        app:srcCompat="@drawable/default_photo" />
+
+    <TextView
+        android:id="@+id/sendPointsAwarded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="69dp"
+        android:text="Points Awarded:"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/pointsPicture"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Points Awarded:" />
+
+    <TextView
+        android:id="@+id/currentPointsAwarded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="17dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/pointsPicture"
+        app:layout_constraintTop_toBottomOf="@+id/sendPointsAwarded"
+        tools:text="Total Points Currently Awarded" />
+
+    <TextView
+        android:id="@+id/pointsDept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="22dp"
+        android:text="Department"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/pointsPicture"
+        app:layout_constraintTop_toBottomOf="@+id/currentPointsAwarded" />
+
+    <TextView
+        android:id="@+id/pointsYourDept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="19dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/pointsPicture"
+        app:layout_constraintTop_toBottomOf="@+id/pointsDept"
+        tools:text="Your Department Here" />
+
+    <TextView
+        android:id="@+id/pointsPosition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="16dp"
+        android:text="Position"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/pointsPicture"
+        app:layout_constraintTop_toBottomOf="@+id/pointsYourDept"
+        tools:text="Position" />
+
+    <TextView
+        android:id="@+id/addPointsPosition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="14dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/pointsPicture"
+        app:layout_constraintTop_toBottomOf="@+id/pointsPosition"
+        tools:text="Your Position Here" />
+
+    <TextView
+        android:id="@+id/story"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:text="Your Story"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pointsPicture" />
+
+    <TextView
+        android:id="@+id/yourStoryPoints"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:background="#FFEEEEEE"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/story" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="51dp"
+        android:text="Reward Points to Send:"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/story" />
+
+    <EditText
+        android:id="@+id/editSendPoints"
+        android:layout_width="197dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="101dp"
+        android:background="#FFEEEEEE"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/addPointsPosition" />
+
+    <TextView
+        android:id="@+id/countPointsSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <EditText
+            android:id="@+id/editPointsNote"
+            android:layout_width="376dp"
+            android:layout_height="135dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:background="#FFEEEEEE"
+            android:ems="10"
+            android:gravity="top"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine|textCapSentences"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/countPointsSend" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
